@@ -1,0 +1,217 @@
+{# web/themes/custom/fundacion_acres/templates/page--node--12.html.twig #}
+<!DOCTYPE html>
+<html lang="{{ language.getId }}">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body{{ attributes }}>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Saltar al contenido principal'|t }}
+    </a>
+
+    {# ----- Header global ----- #}
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{{ path('<front>') ~ 'home' }}">
+          <img src="{{ directory }}/assets/images/logo_acres-01.png" alt="Logo Fundación Acres">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#main-menu" aria-controls="main-menu"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-4 fw-bold">
+           {# Dropdown "Qué hacemos" #}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'que-hacemos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Qué hacemos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'beca-talentos' }}">Beca talentos para la ingeniería</a></li>
+
+              {# micrositio externo #}
+              <li>
+              <a class="dropdown-item" href="{{ path('<front>') ~ 'beca-guillermina' }}">
+               Beca Guillermina
+              </a>
+            </li>
+
+            <li><a class="dropdown-item" href="{{ path('<front>') ~ 'obras-labor-social' }}">Obras con labor social</a></li>
+          </ul>
+        </li>
+            <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'quienes-somos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Quienes somos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'talentos-alumni' }}">Talentos alumni</a></li>
+          </ul>
+        </li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'impacto' }}">Impacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'contacto' }}">Contacto</a></li>
+          </ul>
+
+          <div class="ms-auto">
+            <a class="btn btn-light btn-lg bt-final-btn" href="{{ path('<front>') ~ 'implusa-talento' }}"><strong>Impulsa talento aquí</strong></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-padding bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <h2 class="text-center mb-4 fw-bold">Construyamos juntos un futuro lleno de talento y oportunidades</h2>
+            <p class="text-center mb-5">
+              Tu apoyo puede marcar la diferencia en la vida de un joven y en el desarrollo de toda una comunidad.
+              En la Fundación ACRES creemos en el poder de las alianzas: empresas, profesionales y ciudadanos comprometidos
+              que deciden convertir la inversión social en transformación real.
+            </p>
+
+            <!-- 🔹 Formulario -->
+            <form method="POST" novalidate class="p-4 bg-white shadow rounded contact-form">
+              <h3 class="mb-4 fw-bold">Formulario de contacto</h3>
+
+              <!-- Nombre -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" id="name" placeholder="Escribe tu nombre">
+              </div>
+
+              <!-- Correo y Teléfono -->
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="phone" class="form-label">Teléfono (WhatsApp)</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="+57 3xx xxx xxxx">
+                  <small class="text-muted">Queremos poder contactarte más fácil.</small>
+                </div>
+              </div>
+
+              <!-- Intereses -->
+              <div class="mb-3">
+                <label class="form-label fw-bold">Me interesa (selecciona una o varias opciones)</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="aliado">
+                  <label class="form-check-label" for="aliado">Ser Aliado Estratégico (empresa u organización)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="donar">
+                  <label class="form-check-label" for="donar">Donar recursos para becas y programas</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="mentor">
+                  <label class="form-check-label" for="mentor">Ser Mentor o Voluntario</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="colaborar">
+                  <label class="form-check-label" for="colaborar">Proponer una iniciativa o colaboración</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="conocer">
+                  <label class="form-check-label" for="conocer">Conocer más sobre la Fundación</label>
+                </div>
+              </div>
+
+              <!-- Mensaje -->
+              <div class="mb-3">
+                <label for="message" class="form-label">Mensaje (opcional)</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Cuéntanos tu idea, propuesta o interés"></textarea>
+              </div>
+
+              <!-- Botón -->
+              <div class="text-center">
+                <button type="submit" class="btn btn-dark btn-lg bt-final-btn">
+                  Quiero empezar a transformar vida
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    {# ----- Footer global ----- #}
+    {{ page.footer }}
+
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+
+        <!-- Columna izquierda -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h5 class="fw-bold mb-3">Fundación ACRES</h5>
+          <ul class="list-unstyled">
+            <li><a href="/quienes-somos" class="footer-link">Quiénes somos</a></li>
+            <li><a href="/informacion-legal" class="footer-link">Información legal</a></li>
+            <li><a href="/contacto" class="footer-link">Contacto</a></li>
+            <li><a href="/politica-privacidad" class="footer-link">Política de privacidad</a></li>
+            <li><a href="/tratamiento-datos" class="footer-link">Tratamiento de datos</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="col-md-6">
+          <h5 class="fw-bold mb-3">Síguenos en redes</h5>
+          <div class="d-flex gap-3">
+            <a href="https://facebook.com" target="_blank" class="footer-icon">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="footer-icon">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="footer-icon">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="footer-icon">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Línea inferior -->
+      <div class="row mt-4">
+        <div class="col text-center">
+          <small>&copy; {{ "now"|date("Y") }} Fundación ACRES. Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>

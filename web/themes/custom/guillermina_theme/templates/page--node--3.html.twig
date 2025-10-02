@@ -1,0 +1,348 @@
+{# web/themes/custom/fundacion_acres/templates/page--node--3.html.twig #}
+<!DOCTYPE html>
+<html lang="{{ language.getId }}">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body{{ attributes }}>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Saltar al contenido principal'|t }}
+    </a>
+
+    {# ----- Header global ----- #}
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{{ path('<front>') ~ 'home' }}">
+          <img src="{{ directory }}/assets/images/logo_acres-01.png" alt="Logo Fundación Acres">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#main-menu" aria-controls="main-menu"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-4 fw-bold">
+           {# Dropdown "Qué hacemos" #}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'que-hacemos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Qué Hacemos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'beca-talentos' }}">Beca talentos para la ingeniería</a></li>
+
+              {# micrositio externo #}
+              <li>
+              <a class="dropdown-item" href="{{ path('<front>') ~ 'beca-guillermina' }}">
+               Beca Guillermina
+              </a>
+            </li>
+
+            <li><a class="dropdown-item" href="{{ path('<front>') ~ 'obras-labor-social' }}">Obras con labor social</a></li>
+          </ul>
+        </li>
+            <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'quienes-somos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Quienes Somos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'talentos-alumni' }}">Talentos alumni</a></li>
+          </ul>
+        </li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'impacto' }}">Impacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'contacto' }}">Contacto</a></li>
+          </ul>
+
+          <div class="ms-auto">
+            <a class="btn btn-light btn-lg bt-final-btn" href="{{ path('<front>') ~ 'implusa-talento' }}"><strong>Impulsa talento aquí</strong></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {# =========================================================
+       SECCIÓN 1 – BANNER con imagen de fondo + texto + CTA
+       ========================================================= #}
+   <section class="bt-hero text-white" style="background-image:url('{{ directory }}/assets/images/1.png');">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-lg-8 bt-hero-content">
+
+            <p class="bt-hero-title2">
+              Invertimos en talentos de la Ingeniería para transformar
+              comunidades y construir futuro, conectando a jóvenes con gran
+              potencial, universidades de excelencia y empresas comprometidas
+              para generar desarrollo sostenible y oportunidades que perduran.
+            </p>
+
+            <a href="{{ path('<front>') ~ 'implusa-talento' }}" class="btn btn-dark btn-lg bt-final-btn">
+              <strong>Quiero apoyar Talentos</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {# decoración opcional #}
+      <div class="bt-hero-shape"></div>
+    </section>
+
+    <section class="bt-como" style="background-color:#333333;">
+      <div class="container">
+      <h2 class="bt-test-title2 fw-normal text-center mt-4"style="color:#FECA35;"><strong>Nuestro impacto</strong></h2>
+        <h2 class="bt-intro-title2">
+          <span class="fw-normal">
+            En ACRES, conectamos jóvenes con gran potencial, universidades
+            de calidad y empresas comprometidas para generar impacto social y desarrollo sostenible.
+          </span>
+        </h2>
+
+        <div class="row justify-content-center g-4">
+          <!-- Tarjeta 1 -->
+          <div class="col-12 col-md-4 col-lg-4">
+            <article class="como-card">
+              <div>
+              <img
+                src="{{ directory }}/assets/images/icono_6.png"
+              >
+              </div>
+              <h2 class="bt-test-title2" style="color:#FECA35;">Jóvenes</h2>
+              <span class="bt-intro-title2 fw-normal">
+                De estratos 1 y 2 becados en programas de ingeniería.
+              </span>
+            </article>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="col-12 col-md-4 col-lg-4">
+            <article class="como-card">
+              <div>
+                <img
+                  src="{{ directory }}/assets/images/icono_5.png"
+                >
+              </div>
+              <h2 class="bt-test-title2" style="color:#FECA35;">Universidades</h2>
+              <span class="bt-intro-title2 fw-normal">
+                De alta calidad aliadas en diferentes regiones del país.
+              </span>
+            </article>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="col-12 col-md-4 col-lg-4">
+            <article class="como-card">
+              <div>
+              <img
+                src="{{ directory }}/assets/images/icono_7.png"
+              >
+              </div>
+              <h2 class="bt-test-title2" style="color:#FECA35;">Empresas</h2>
+              <span class="bt-intro-title2 fw-normal">
+                Que confían en la ingeniería como motor de progreso.
+              </span>
+            </article>
+          </div>
+        </div>
+
+        <p class="bt-intro-title2 fw-normal text-center mt-4">
+          Cada talento apoyado abre un camino de oportunidades, fortalece la industria y transforma comunidades enteras.
+        </p>
+      </div>
+    </section>
+
+          <section class="aliados-section">
+      <div class="aliados-container">
+        <h2 class="bt-test-title2"style="color:#333333;"><strong>Nuestros aliados</strong></h2>
+
+    <div class="logo-slider-horizontal" aria-label="Carrusel de logos aliados">
+      <div class="logo-track-horizontal">
+        <!-- Logos -->
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/1.png" alt="OPAIN S.A." /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/2.png" alt="CCI Recorte" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/3.png" alt="INC" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/4.png" alt="CCI Seccional Occidente" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/5.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/6.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/7.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/8.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/9.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/10.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/11.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/12.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/13.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/14.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/15.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/16.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/17.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/18.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/19.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/20.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/21.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/22.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/23.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/24.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/25.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/26.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/27.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/28.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/29.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/30.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/31.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/32.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/33.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/34.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/35.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/36.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/37.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/38.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/39.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/40.png" alt="Logo Principal CCI" /></div>
+
+
+
+        <!-- Duplicados para el bucle infinito -->
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/1.png" alt="OPAIN S.A." /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/2.png" alt="CCI Recorte" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/3.png" alt="INC" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/4.png" alt="CCI Seccional Occidente" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/5.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/6.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/7.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/8.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/9.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/10.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/11.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/12.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/13.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/14.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/15.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/16.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/17.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/18.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/19.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/20.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/21.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/22.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/23.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/24.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/25.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/26.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/27.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/28.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/29.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/30.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/31.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/32.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/33.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/34.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/35.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/36.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/37.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/38.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/39.png" alt="Logo Principal CCI" /></div>
+        <div class="logo-item"><img src="{{ directory }}/assets/images/Logos_Aliados/40.png" alt="Logo Principal CCI" /></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+    {# === SECCIÓN 8: Banner final === #}
+    <section class="bt-final-cta" role="region" aria-label="Cierre y llamado a la acción">
+      <div class="bt-final-bg" style="background-image:url('{{ directory }}/assets/images/banners_final.png');"></div>
+      <div class="bt-final-overlay"></div>
+
+      <div class="container">
+        <div class="bt-final-content text-center">
+          <h2 class="bt-final-title">
+            La inversión social impulsa a los talentos de la Ingeniería, fortalece su formación y
+            proyecta comunidades con más oportunidades. Invertir en talento es invertir en el futuro,
+            y ese futuro comienza hoy. Cada logro abre la puerta a nuevas posibilidades.
+            Súmate y sé parte de la próxima historia.
+          </h2>
+
+          <a href="{{ path('<front>') ~ 'implusa-talento' }}"
+            class="btn btn-light btn-lg bt-final-btn"
+            aria-label="Quiero apoyar a un joven de región">
+            <strong>Impulsa el talento aquí</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    {# ----- Footer global ----- #}
+    {{ page.footer }}
+
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+
+        <!-- Columna izquierda -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h5 class="fw-bold mb-3">Fundación ACRES</h5>
+          <ul class="list-unstyled">
+            <li><a href="/quienes-somos" class="footer-link">Quiénes somos</a></li>
+            <li><a href="/informacion-legal" class="footer-link">Información legal</a></li>
+            <li><a href="/contacto" class="footer-link">Contacto</a></li>
+            <li><a href="/politica-privacidad" class="footer-link">Política de privacidad</a></li>
+            <li><a href="/tratamiento-datos" class="footer-link">Tratamiento de datos</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="col-md-6">
+          <h5 class="fw-bold mb-3">Síguenos en redes</h5>
+          <div class="d-flex gap-3">
+            <a href="https://facebook.com" target="_blank" class="footer-icon">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="footer-icon">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="footer-icon">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="footer-icon">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Línea inferior -->
+      <div class="row mt-4">
+        <div class="col text-center">
+          <small>&copy; {{ "now"|date("Y") }} Fundación ACRES. Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{% if items %}
+  <nav class="navbar navbar-expand-lg w-100">
+    <div class="container-fluid">
+
+      {# LOGO ALINEADO A LA IZQUIERDA #}
+      <a class="navbar-brand" href="{{ path('<front>') }}">
+        <img src="{{ base_path ~ directory }}/logo.png" alt="Beca Guillermina" height="40">
+      </a>
+
+      {# MENU DE NAVEGACIÓN #}
+      <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
+        {% for item in items %}
+          <li class="nav-item{% if item.in_active_trail %} active{% endif %}{% if item.attributes.class %} {{ item.attributes.class|join(' ') }}{% endif %}">
+            <a href="{{ item.url }}" class="nav-link{% if item.in_active_trail %} active{% endif %}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <!-- Botón CTA separado a la derecha -->
+        <div class="ms-auto">
+          <a href="http://localhost/guillermina/web/donar" style="background-color: #f28c28; color: #fff; padding: 0.5rem 1rem; border-radius: 5px; font-weight: bold; text-transform: uppercase; text-decoration: none; display: inline-block;">Donar aquí</a>
+        </div>
+    </div>
+  </nav>
+{% endif %}

@@ -1,0 +1,6 @@
+guillermina_wompi.signature:
+  path: '/wompi/signature'
+  defaults:
+    _controller: '\Drupal\guillermina_wompi\Controller\WompiSignatureController'
+  requirements:
+    _permission: 'access content'

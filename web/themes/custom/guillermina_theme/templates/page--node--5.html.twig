@@ -1,0 +1,443 @@
+{# web/themes/custom/fundacion_acres/templates/page--node--11.html.twig #}
+<!DOCTYPE html>
+<html lang="{{ language.getId }}">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body{{ attributes }}>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Saltar al contenido principal'|t }}
+    </a>
+
+    {# ----- Header global ----- #}
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{{ path('<front>') ~ 'home' }}">
+          <img src="{{ directory }}/assets/images/logo_acres-01.png" alt="Logo Fundación Acres">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#main-menu" aria-controls="main-menu"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-4 fw-bold">
+           {# Dropdown "Qué hacemos" #}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'que-hacemos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Qué hacemos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'beca-talentos' }}">Beca talentos para la ingeniería</a></li>
+
+              {# micrositio externo #}
+              <li>
+              <a class="dropdown-item" href="{{ path('<front>') ~ 'beca-guillermina' }}">
+               Beca Guillermina
+              </a>
+            </li>
+
+            <li><a class="dropdown-item" href="{{ path('<front>') ~ 'obras-labor-social' }}">Obras con labor social</a></li>
+          </ul>
+        </li>
+            <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'quienes-somos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Quienes somos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'talentos-alumni' }}">Talentos alumni</a></li>
+          </ul>
+        </li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'impacto' }}">Impacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'contacto' }}">Contacto</a></li>
+          </ul>
+
+          <div class="ms-auto">
+            <a class="btn btn-light btn-lg bt-final-btn" href=href="{{ path('<front>') ~ 'implusa-talento' }}"><strong>Impulsa talento aquí</strong></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {# =========================================================
+       SECCIÓN 1 – BANNER con imagen de fondo + texto + CTA
+       ========================================================= #}
+   <section class="bt-hero text-white" style="background-image:url('{{ directory }}/assets/images/3.png');">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-lg-8 bt-hero-content">
+            <h1 class="visually-hidden">Beca talentos para la ingeniería</h1>
+            <p class="bt-hero-kicker">Beca talentos para la ingeniería</p>
+
+            <p class="bt-hero-title">
+              Talentos que permanecen, una industria que se fortalece.
+            </p>
+
+            <a href="{{ path('<front>') ~ 'implusa-talento' }}" class="btn btn-light btn-lg bt-final-btn">
+              <strong>Quiero apoyar Talentos</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {# decoración opcional #}
+      <div class="bt-hero-shape"></div>
+    </section>
+
+    {# --- SECCIÓN 2: Intro de texto (estilo ONE) --- #}
+    <section class="bt-intro">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+
+            <h2 class="bt-intro-title">
+              <span class="fw-normal">La deserción universitaria en programas de ingeniería es uno de los mayores retos para la industria y el desarrollo del país.
+              En la Fundación ACRES creemos que ningún joven con talento debería abandonar sus estudios por falta de recursos
+              Por eso creamos nuestras Becas ACRES, un programa que elimina barreras y acompaña integralmente a los estudiantes para que culminen su formación.
+              </br></br><h2 class="bt-test-title2"style="color:#333333;">El desafio</h2></br>
+              Cada año, cientos de jóvenes de estratos 1 y 2 ven interrumpido su sueño de convertirse en ingenieros por dificultades económicas o académicas.
+              Esta realidad limita no solo su futuro, sino también el crecimiento de la industria y el progreso de las comunidades.
+              </span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {# === SECCIÓN 3: Nuestra solución (2 columnas) === #}
+    <section class="bt-solucion">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- Columna TEXTO -->
+          <div class="col-12 col-lg-6">
+          <h2 class="bt-test-title2"style="color:#333333;"><strong>Nuestra solución</strong></h2>
+
+          <p class="bt-intro-title3 fw-normal">
+            Con nuestras becas y un acompañamiento integral:
+          </p>
+
+          <ul class="bt-sol-list">
+            <li><span class="chk"></span> Eliminamos las barreras económicas que impiden la permanencia.</li>
+            <li><span class="chk"></span> Brindamos apoyo académico y formativo.</li>
+            <li><span class="chk"></span> Fortalecemos las capacidades de los talentos para que se enfoquen en lo más importante: convertirse en profesionales de alto impacto.</li>
+          </ul>
+        </div>
+
+        <!-- Columna ILUSTRACIÓN -->
+          <div class="col-12 col-lg-6">
+            <div class="bt-sol-illustration text-center">
+            <img
+              src="{{ directory }}/assets/images/01.png"
+              alt="Talentos ingeniería"
+              class="bt-sol-img"
+            >
+            <div class="bt-sol-shape"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    {# === SECCIÓN 4:El Resultado (2 columnas invertidas) === #}
+    <section class="bt-solucion">
+      <div class="container">
+        <div class="row align-items-center gy-5 flex-lg-row-reverse">
+
+          <!-- Columna TEXTO -->
+          <div class="col-12 col-lg-6">
+            <h2 class="bt-test-title2"style="color:#333333;"><strong>El resultado</strong></h2>
+
+              <p class="bt-intro-title3 fw-normal">
+                El potencial de cada estudiante se transforma en capital humano altamente calificado:
+                ingenieros capaces de fortalecer la industria, liderar proyectos estratégicos y
+                aportar al desarrollo sostenible de las regiones.
+              </p>
+
+          </div>
+
+          <!-- Columna ILUSTRACIÓN -->
+          <div class="col-12 col-lg-6">
+            <div class="bt-sol-illustration text-center">
+              <img
+                src="{{ directory }}/assets/images/02.png"
+                alt="Estrategia Talentos ingeniería"
+                class="bt-sol-img"
+              >
+            <div class="bt-sol-shape"></div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    {# === SECCIÓN 5: ¿Cómo acompañamos? === #}
+    <section class="bt-como" style="background-color:#333333;">
+      <div class="container">
+        <h2 class="bt-test-title2 fw-normal text-center mt-4"style="color:#FECA35;"><strong>¿Cómo acompañamos?</br></strong></h2>
+
+        <div class="row g-4">
+          <!-- Tarjeta 1 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="como-card">
+              <div>
+              <img
+                src="{{ directory }}/assets/images/icono_10.png"
+              >
+              </div>
+              <h2 class="bt-test-title2" style="color:#FECA35;">Educación financiera</h2>
+              <span class="bt-intro-title2 fw-normal">
+                Enseñamos a los jóvenes a administrar sus recursos. Queremos que aprendan a planear,
+                ahorrar y tomar decisiones financieras inteligentes, para que su futuro profesional esté
+                acompañado de estabilidad económica y autonomía personal.
+              </span>
+            </article>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="como-card">
+              <div>
+              <img
+                src="{{ directory }}/assets/images/icono_9.png"
+              >
+              </div>
+            <h2 class="bt-test-title2" style="color:#FECA35;">Power</br> skills</h2>
+            <span class="bt-intro-title2 fw-normal">
+              Además de la excelencia académica, impulsamos competencias transversales como liderazgo,
+              comunicación, trabajo en equipo y gestión de proyectos. Estas habilidades fortalecen su
+              perfil y los convierten en profesionales integrales.
+            </span>
+            </article>
+          </div>
+
+          <!-- Tarjeta 3 -->
+            <div class="col-12 col-md-6 col-lg-3">
+            <article class="como-card">
+              <div>
+                <img
+                  src="{{ directory }}/assets/images/icono_11.png"
+                >
+              </div>
+            <h2 class="bt-test-title2" style="color:#FECA35;">Seguimiento a la excelencia</h2>
+            <span class="bt-intro-title2 fw-normal">
+              Acompañamos a cada estudiante en su formación, evaluando sus necesidades por semestre,
+              apoyándolos en momentos clave y preparándolos para prácticas y proyectos, para que
+              alcancen su máximo potencia.
+            </span>
+          </article>
+        </div>
+
+        <!-- Tarjeta 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="como-card">
+              <div>
+                <img
+                  src="{{ directory }}/assets/images/icono_12.png"
+                >
+              </div>
+              <h2 class="bt-test-title2" style="color:#FECA35;">Ruta hacia la empleabilidad</h2>
+              <span class="bt-intro-title2 fw-normal">
+                Preparamos a los talentos para dar el salto al mundo laboral. A través de prácticas,
+                pasantías y alianzas con empresas del sector, diseñamos una ruta clara hacia su
+                inserción profesional.
+              </span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {# === SECCIÓN 6: ¿Dónde están nuestros talentos? === #}
+    <section class="bt-mapa">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <header class="text-center mb-3">
+              <h2 class="bt-test-title2"style="color:#333333;"><strong>¿Dónde están nuestros talentos?</strong></h2>
+              <p class="bt-intro-title3 fw-normal">
+                En diferentes regiones de Colombia, talentos ACRES construyen su futuro.
+              </p>
+            </header>
+
+            <figure class="bt-mapa-frame">
+              {# Reemplaza la ruta por tu imagen del mapa #}
+              <img
+                src="{{ directory }}/assets/images/mapa.png"
+                alt="Regiones con talentos ACRES en Colombia"
+                class="bt-mapa-img"
+              >
+          </div>
+          <div class="text-center">
+              <a href="{{ path('<front>') ~ 'implusa-talento' }}" class="btn btn-dark btn-lg bt-final-btn">
+                <strong>Quiero apoyar a más jóvenes de la región</strong>
+              </a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    {# === SECCIÓN: Testimonios === #}
+    <section class="bt-testimonios">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="bt-test-title2"style="color:#333333;"><strong>Voces que inspiran</strong></h2>
+            <p class="bt-intro-title3 fw-normal">
+              Los testimonios de nuestros talentos muestran cómo una beca puede cambiar no solo una vida, sino el destino de una comunidad.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4 bt-test-grid">
+          {# Card 1 #}
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="bt-test-card">
+              <div class="bt-test-media">
+                <img src="{{ directory }}/assets/images/T1.png" alt="Testimonio 1">
+              </div>
+              <div class="bt-test-overlay">
+                <h2 class="bt-test-title2" style="color:#FECA35;">
+                <strong>Juan Felipe Navas</strong>
+                </h2>
+              </div>
+              <span class="bt-test-accent"></span>
+              <a href="#" class="stretched-link" aria-label="Leer testimonio 1"></a>
+            </article>
+          </div>
+
+          {# Card 2 #}
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="bt-test-card">
+              <div class="bt-test-media">
+                <img src="{{ directory }}/assets/images/T2.png" alt="Testimonio 2">
+              </div>
+              <div class="bt-test-overlay">
+                <h2 class="bt-test-title2" style="color:#FECA35;">
+                <strong>Natalia Valentina Bravo</strong>
+                </h2>
+              </div>
+              <span class="bt-test-accent"></span>
+              <a href="#" class="stretched-link" aria-label="Leer testimonio 2"></a>
+            </article>
+          </div>
+
+          {# Card 3 #}
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="bt-test-card">
+              <div class="bt-test-media">
+                <img src="{{ directory }}/assets/images/T3.png" alt="Testimonio 3">
+              </div>
+              <div class="bt-test-overlay">
+              <h2 class="bt-test-title2" style="color:#FECA35;">
+                <strong>Cristopher Angola</strong>
+                </h2>
+              </div>
+              <span class="bt-test-accent"></span>
+              <a href="#" class="stretched-link" aria-label="Leer testimonio 3"></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {# === SECCIÓN 8: Banner final === #}
+    <section class="bt-final-cta" role="region" aria-label="Cierre y llamado a la acción">
+      <div class="bt-final-bg" style="background-image:url('{{ directory }}/assets/images/banners_final.png');"></div>
+      <div class="bt-final-overlay"></div>
+
+      <div class="container">
+        <div class="bt-final-content text-center">
+          <h2 class="bt-final-title">
+            Si crees que todos tienen derecho a una vida de oportunidades y justicia,
+            sin importar dónde vivan, y si crees que la gente común puede cambiar
+            el mundo, entonces únete a nosotros.
+          </h2>
+
+          <a href="/se-parte#talentos-region"
+            class="btn btn-light btn-lg bt-final-btn"
+            aria-label="Quiero apoyar a un joven de región">
+            <strong>Quiero apoyar a un joven de región</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {# ----- Footer global ----- #}
+    {{ page.footer }}
+
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+
+        <!-- Columna izquierda -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h5 class="fw-bold mb-3">Fundación ACRES</h5>
+          <ul class="list-unstyled">
+            <li><a href="/quienes-somos" class="footer-link">Quiénes somos</a></li>
+            <li><a href="/informacion-legal" class="footer-link">Información legal</a></li>
+            <li><a href="/contacto" class="footer-link">Contacto</a></li>
+            <li><a href="/politica-privacidad" class="footer-link">Política de privacidad</a></li>
+            <li><a href="/tratamiento-datos" class="footer-link">Tratamiento de datos</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="col-md-6">
+          <h5 class="fw-bold mb-3">Síguenos en redes</h5>
+          <div class="d-flex gap-3">
+            <a href="https://facebook.com" target="_blank" class="footer-icon">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="footer-icon">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="footer-icon">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="footer-icon">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Línea inferior -->
+      <div class="row mt-4">
+        <div class="col text-center">
+          <small>&copy; {{ "now"|date("Y") }} Fundación ACRES. Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>

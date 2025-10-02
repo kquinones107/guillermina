@@ -1,0 +1,303 @@
+{# web/themes/custom/fundacion_acres/templates/page--node--15.html.twig #}
+<!DOCTYPE html>
+<html lang="{{ language.getId }}">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body{{ attributes }}>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Saltar al contenido principal'|t }}
+    </a>
+
+    {# ----- Header global ----- #}
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{{ path('<front>') ~ 'home' }}">
+          <img src="{{ directory }}/assets/images/logo_acres-01.png" alt="Logo Fundación Acres">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#main-menu" aria-controls="main-menu"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-4 fw-bold">
+           {# Dropdown "Qué hacemos" #}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'que-hacemos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Qué hacemos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'beca-talentos' }}">Beca talentos para la ingeniería</a></li>
+
+              {# micrositio externo #}
+              <li>
+              <a class="dropdown-item" href="{{ path('<front>') ~ 'beca-guillermina' }}">
+               Beca Guillermina
+              </a>
+            </li>
+
+            <li><a class="dropdown-item" href="{{ path('<front>') ~ 'obras-labor-social' }}">Obras con labor social</a></li>
+          </ul>
+        </li>
+            <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'quienes-somos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Quienes somos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'talentos-alumni' }}">Talentos alumni</a></li>
+          </ul>
+        </li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'impacto' }}">Impacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'contacto' }}">Contacto</a></li>
+          </ul>
+
+          <div class="ms-auto">
+            <a class="btn btn-light btn-lg bt-final-btn" href="{{ path('<front>') ~ 'impulsa-talento' }}"><strong>Impulsa talento aquí</strong></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {# =========================================================
+       SECCIÓN 1 – BANNER con imagen de fondo + texto + CTA
+       ========================================================= #}
+    <section class="bt-hero text-white" style="background-image:url('{{ directory }}/assets/images/9.png');">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-lg-8 bt-hero-content">
+
+            <p class="bt-hero-title">
+              Sé parte de la transformación: impulsa el talento con tu apoyo.
+            </p>
+
+            <a href="{{ path('<front>') ~ 'implusa-talento' }}" class="btn btn-light btn-lg bt-final-btn">
+              <strong>Sí quiero impulsar el talento</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {# decoración opcional #}
+      <div class="bt-hero-shape"></div>
+    </section>
+
+    {# --- SECCIÓN 2: Intro de texto (estilo ONE) --- #}
+    <section class="bt-intro">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+
+            <h2 class="bt-intro-title">
+              <span class="fw-normal">
+              La transformación comienza con una decisión: apoyar a quienes tienen
+              el talento y los sueños, pero necesitan una oportunidad. En la Fundación ACRES,
+              cada contribución se convierte en becas, acompañamiento y proyectos que fortalecen
+              la ingeniería y generan impacto social duradero.
+              </span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {# === SECCIÓN 3: Nuestra solución (2 columnas) === #}
+    <section class="bt-solucion">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- Columna TEXTO -->
+          <div class="col-12 col-lg-6">
+          <h2 class="bt-test-title2"style="color:#333333;"><strong>Empresas e inversionistas</strong></h2>
+
+          <p class="bt-intro-title3 fw-normal">
+            Tu inversión social es capital estratégico. Canalizamos los recursos de manera eficiente
+            para que cada aporte se traduzca en formación de jóvenes ingenieros, proyectos de infraestructura
+            con valor social y un legado de prosperidad para las comunidades.
+          </p>
+
+          <a href="{{ path('<front>') ~ 'implusa-talento' }}" class="btn btn-dark btn-lg bt-final-btn">
+                <strong>Haz que tu inversión construya futuro</strong>
+              </a>
+        </div>
+
+        <!-- Columna ILUSTRACIÓN -->
+          <div class="col-12 col-lg-6">
+            <div class="bt-sol-illustration text-center">
+            <img
+              src="{{ directory }}/assets/images/07.png"
+              alt="Talentos ingeniería"
+              class="bt-sol-img"
+            >
+            <div class="bt-sol-shape"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    {# === SECCIÓN 4:El Resultado (2 columnas invertidas) === #}
+    <section class="bt-solucion">
+      <div class="container">
+        <div class="row align-items-center gy-5 flex-lg-row-reverse">
+
+          <!-- Columna TEXTO -->
+          <div class="col-12 col-lg-6">
+            <h2 class="bt-test-title2"style="color:#333333;"><strong>Profesionales y mentores</strong></h2>
+
+              <p class="bt-intro-title3 fw-normal">
+                Tu experiencia es guía y motivación. Al unirte como mentor, inspiras a la próxima generación de talentos,
+                ayudándolos a navegar su carrera profesional y a tomar decisiones clave para su futuro.
+              </p>
+
+              <a href="{{ path('<front>') ~ 'implusa-talento' }}" class="btn btn-dark btn-lg bt-final-btn">
+                <strong>Sé el mentor que enciende el potencial</strong>
+              </a>
+
+          </div>
+
+          <!-- Columna ILUSTRACIÓN -->
+          <div class="col-12 col-lg-6">
+            <div class="bt-sol-illustration text-center">
+              <img
+                src="{{ directory }}/assets/images/08.png"
+                alt="Estrategia Talentos ingeniería"
+                class="bt-sol-img"
+              >
+            <div class="bt-sol-shape"></div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    {# === SECCIÓN 5  === #}
+    <section class="bt-solucion">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- Columna TEXTO -->
+          <div class="col-12 col-lg-6">
+          <h2 class="bt-test-title2"style="color:#333333;"><strong>Todos los que quieren marcar la diferencia</strong></h2>
+
+          <p class="bt-intro-title3 fw-normal">
+            Cada donación cuenta. Con tu aporte, haces posible que más jóvenes permanezcan en la universidad y
+            se conviertan en ingenieros que transforman su entorno.
+          </p>
+
+          <a href="{{ path('<front>') ~ 'donar' }}" class="btn btn-dark btn-lg bt-final-btn">
+                <strong>Haz tu donación aquí</strong>
+              </a>
+        </div>
+
+        <!-- Columna ILUSTRACIÓN -->
+          <div class="col-12 col-lg-6">
+            <div class="bt-sol-illustration text-center">
+            <img
+              src="{{ directory }}/assets/images/09.png"
+              alt="Talentos ingeniería"
+              class="bt-sol-img"
+            >
+            <div class="bt-sol-shape"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    {# === SECCIÓN 8: Banner final === #}
+    <section class="bt-final-cta" role="region" aria-label="Cierre y llamado a la acción">
+      <div class="bt-final-bg" style="background-image:url('{{ directory }}/assets/images/banners_final.png');"></div>
+      <div class="bt-final-overlay"></div>
+
+      <div class="container">
+        <div class="bt-final-content text-center">
+          <h2 class="bt-final-title">
+            Cada talento que logra graduarse abre nuevas oportunidades para su vida, su familia y su comunidad. Con tu apoyo,
+            podrán culminar sus estudios, acceder a mejores oportunidades y aportar al desarrollo de la región. Este es el
+            momento de actuar
+          </h2>
+
+        </div>
+      </div>
+    </section>
+
+    {# ----- Footer global ----- #}
+    {{ page.footer }}
+
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+
+        <!-- Columna izquierda -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h5 class="fw-bold mb-3">Fundación ACRES</h5>
+          <ul class="list-unstyled">
+            <li><a href="/quienes-somos" class="footer-link">Quiénes somos</a></li>
+            <li><a href="/informacion-legal" class="footer-link">Información legal</a></li>
+            <li><a href="/contacto" class="footer-link">Contacto</a></li>
+            <li><a href="/politica-privacidad" class="footer-link">Política de privacidad</a></li>
+            <li><a href="/tratamiento-datos" class="footer-link">Tratamiento de datos</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="col-md-6">
+          <h5 class="fw-bold mb-3">Síguenos en redes</h5>
+          <div class="d-flex gap-3">
+            <a href="https://facebook.com" target="_blank" class="footer-icon">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="footer-icon">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="footer-icon">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="footer-icon">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Línea inferior -->
+      <div class="row mt-4">
+        <div class="col text-center">
+          <small>&copy; {{ "now"|date("Y") }} Fundación ACRES. Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>

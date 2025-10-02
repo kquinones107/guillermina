@@ -1,0 +1,217 @@
+{# web/themes/custom/fundacion_acres/templates/page--node--1.html.twig #}
+<!DOCTYPE html>
+<html lang="{{ language.getId }}">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body{{ attributes }}>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Saltar al contenido principal'|t }}
+    </a>
+
+    {# ----- Header global ----- #}
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{{ path('<front>') ~ 'home' }}">
+          <img src="{{ directory }}/assets/images/logo_acres-01.png" alt="Logo Fundación Acres">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#main-menu" aria-controls="main-menu"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-4 fw-bold">
+           {# Dropdown "Qué hacemos" #}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'que-hacemos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Qué hacemos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'beca-talentos' }}">Beca talentos para la ingeniería</a></li>
+
+              {# micrositio externo #}
+              <li>
+              <a class="dropdown-item" href="{{ path('<front>') ~ 'beca-guillermina' }}">
+               Beca Guillermina
+              </a>
+            </li>
+
+            <li><a class="dropdown-item" href="{{ path('<front>') ~ 'obras-labor-social' }}">Obras con labor social</a></li>
+          </ul>
+        </li>
+            <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'quienes-somos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Quienes somos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'talentos-alumni' }}">Talentos alumni</a></li>
+          </ul>
+        </li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'impacto' }}">Impacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'contacto' }}">Contacto</a></li>
+          </ul>
+
+          <div class="ms-auto">
+            <a class="btn btn-light btn-lg bt-final-btn" href="{{ path('<front>') ~ 'implusa-talento' }}"><strong>Impulsa talento aquí</strong></a>
+          </div>
+        </div>
+      </div>
+  </header>
+
+<!-- Wompi (recomendado tenerlo cargado) --><script src="https://checkout.wompi.co/widget.js" async=""></script><!-- HERO con imagen de fondo -->
+<section class="donar-hero d-flex align-items-center">
+    <div class="container">
+        <div class="row align-items-start align-items-lg-center">
+            <!-- Columna izquierda: mensaje grande -->
+            <div class="col-lg-7 mb-4 mb-lg-0">
+                <img class="mb-4" style="max-height:56px;" src="/themes/custom/guillermina_theme/logo.svg" alt="Beca Guillermina">
+                <h1 class="display-5 fw-bold hero-title">
+                    Tu donación será la chispa que transformará vidas.
+                </h1>
+                <p class="lead text-white-50 mt-3">
+                    Apoya a ingenieras del futuro con becas, mentorías y recursos.
+                </p>
+            </div>
+            <!-- Columna derecha: TARJETA de donación -->
+            <div class="col-lg-5">
+                <div class="card shadow-lg border-0 donar-card">
+                    <div class="card-body p-4">
+                        <!-- Cabecera tipo “1/3” -->
+                        <div class="d-flex align-items-center gap-2 mb-2 small text-muted">
+                            <div class="step-dot">
+                                1
+                            </div>
+                            <p>
+                                <span>Selecciona tu donación</span>
+                            </p>
+                        </div>
+                        <h2 class="h5 fw-bold mb-3 text-center">
+                            ¿Qué tipo de donación deseas hacer?
+                        </h2>
+                        <!-- Tabs Mensual/Única (visuales) -->
+                        <div class="btn-group w-100 mb-3" role="group">
+                            <button class="btn btn-type active" type="button" data-type="monthly">                                                                                                                                                                 </button>
+                        </div>
+                        <!-- Presets -->
+                        <div class="d-flex flex-wrap gap-2 justify-content-center mb-3">
+                            <button class="btn amount-pill" type="button" data-amount="40000">$40.000</button> <button class="btn amount-pill active" type="button" data-amount="60000">$60.000</button> <button class="btn amount-pill" type="button" data-amount="80000">$80.000</button> <button class="btn amount-pill" type="button" data-amount="0">Otro valor</button>
+                        </div>
+                        <!-- Texto de incentivo -->
+                        <div class="d-flex align-items-start gap-2 small bg-light rounded p-2 mb-3">
+                            <div class="emoji">
+                                🎓
+                            </div>
+                            <div>
+                                Con <strong>$60.000</strong> impulsas becas y mentorías para estudiantes de ingeniería.
+                            </div>
+                        </div>
+                        <!-- Form Web Checkout (redirección) -->
+                        <form class="donar-form" action="https://checkout.wompi.co/p/" method="GET" id="form-wompi">
+                            <!-- Requeridos por Wompi -->
+                            <p>
+                                <input type="hidden" name="public-key" value="pub_test_op15BXUOUWbmqf0RnMEW6gJZRoPAdKbm"> <input type="hidden" name="currency" value="COP"> <input type="hidden" name="amount-in-cents" id="amount-in-cents" value=""> <input type="hidden" name="reference" id="wompi-ref" value=""> <input type="hidden" name="signature:integrity" id="wompi-signature" value=""> <input type="hidden" name="redirect-url" value="http://localhost/guillermina/web/donar/gracias"> <!-- Monto editable --><label class="form-label mt-2" for="monto">Monto a donar (COP)</label>
+                            </p>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">$</span> <input class="form-control" id="monto" type="number" min="1000" step="1000" placeholder="60000" value="60000" required="">
+                            </div>
+                            <p>
+                                <button class="btn btn-donar w-100 py-2" type="submit">Donar ahora</button>&nbsp;<!-- Logos de medios de pago (decorativo) -->
+                            </p>
+                            <div class="text-center mt-3">
+                                <p>
+                                    <small class="text-muted d-block">Pago seguro con:</small>
+                                </p>
+                                <div class="pay-logos mt-2">
+                                    <span>VISAMastercardAmexNequiPSE</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /card -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    {# ----- Footer global ----- #}
+    {{ page.footer }}
+
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+
+        <!-- Columna izquierda -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h5 class="fw-bold mb-3">Fundación ACRES</h5>
+          <ul class="list-unstyled">
+            <li><a href="/quienes-somos" class="footer-link">Quiénes somos</a></li>
+            <li><a href="/informacion-legal" class="footer-link">Información legal</a></li>
+            <li><a href="/contacto" class="footer-link">Contacto</a></li>
+            <li><a href="/politica-privacidad" class="footer-link">Política de privacidad</a></li>
+            <li><a href="/tratamiento-datos" class="footer-link">Tratamiento de datos</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="col-md-6">
+          <h5 class="fw-bold mb-3">Síguenos en redes</h5>
+          <div class="d-flex gap-3">
+            <a href="https://facebook.com" target="_blank" class="footer-icon">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="footer-icon">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="footer-icon">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="footer-icon">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Línea inferior -->
+      <div class="row mt-4">
+        <div class="col text-center">
+          <small>&copy; {{ "now"|date("Y") }} Fundación ACRES. Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>
+

@@ -1,0 +1,573 @@
+{# web/themes/custom/fundacion_acres/templates/page--node--13.html.twig #}
+<!DOCTYPE html>
+<html lang="{{ language.getId }}">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body{{ attributes }}>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Saltar al contenido principal'|t }}
+    </a>
+
+    {# ----- Header global ----- #}
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{{ path('<front>') ~ 'home' }}">
+          <img src="{{ directory }}/assets/images/logo_acres-01.png" alt="Logo Fundación Acres">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#main-menu" aria-controls="main-menu"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-4 fw-bold">
+           {# Dropdown "Qué hacemos" #}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'que-hacemos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Qué hacemos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'beca-talentos' }}">Beca talentos para la ingeniería</a></li>
+
+              {# micrositio externo #}
+              <li>
+              <a class="dropdown-item" href="{{ path('<front>') ~ 'beca-guillermina' }}">
+               Beca Guillermina
+              </a>
+            </li>
+
+            <li><a class="dropdown-item" href="{{ path('<front>') ~ 'obras-labor-social' }}">Obras con labor social</a></li>
+          </ul>
+        </li>
+            <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'quienes-somos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Quienes somos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'talentos-alumni' }}">Talentos alumni</a></li>
+          </ul>
+        </li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'impacto' }}">Impacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'contacto' }}">Contacto</a></li>
+          </ul>
+
+          <div class="ms-auto">
+            <a class="btn btn-light btn-lg bt-final-btn" href="{{ path('<front>') ~ 'implusa-talento' }}"><strong>Impulsa talento aquí</strong></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {# =========================================================
+       SECCIÓN 1 – BANNER con imagen de fondo + texto + CTA
+       ========================================================= #}
+   <section class="bt-hero text-white" style="background-image:url('{{ directory }}/assets/images/5.png');">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-lg-8 bt-hero-content">
+            <h1 class="visually-hidden">Quienes somos</h1>
+
+            <p class="bt-hero-title">
+              Transformamos la inversión social en permanencia académica y desarrollo para la ingeniería en la región.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {# decoración opcional #}
+      <div class="bt-hero-shape"></div>
+    </section>
+
+    {# --- SECCIÓN 2: Intro de texto (estilo ONE) --- #}
+    <section class="bt-intro">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+
+            <h2 class="bt-intro-title">
+              <span class="fw-normal">Desde 2008, en ACRES trabajamos con un propósito claro:
+              convertir la inversión social en oportunidades humanas reales. Nacimos para enfrentar
+              la deserción estudiantil en programas de ingeniería, un reto que limita tanto a
+              los jóvenes como al desarrollo de la industria y las comunidades.
+              </br></br>
+             Impulsados por la Cámara Colombiana de la Infraestructura, hemos crecido de un sueño
+             local a un movimiento nacional que conecta talento, academia y empresas para construir un futuro con más oportunidades.
+              </span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    {# ====== SECCIÓN 3: Nuestro camino (Timeline) ======
+          <section class="bt-mapa">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <header class="text-center mb-3">
+              <h2 class="bt-test-title2"style="color:#333333;"><strong>Nuestro camino</strong></h2>
+              <span class="bt-intro-title3 fw-normal">
+                En diferentes regiones de Colombia, talentos ACRES construyen su futuro.
+              </span>
+            </header>
+
+            <figure class="bt-mapa-frame">
+              {# Reemplaza la ruta por tu imagen del mapa #}
+              <img
+                src="{{ directory }}/assets/images/linea_tiempo.png"
+                alt="Regiones con talentos ACRES en Colombia"
+                class="bt-mapa-img"
+              >
+          </div>
+        </div>
+      </div>
+    </section>
+#}
+
+        {# ====== SECCIÓN 3: Nuestro camino (Timeline) ====== #}
+      <section class="ols-road">
+      <div class="container">
+
+        <div class="text-center mb-4">
+          <h2 class="sec-title mb-2">Nuestro camino</h2>
+          <span class="bt-intro-title3 fw-normal">
+            En diferentes regiones de Colombia, talentos ACRES construyen su futuro.
+          </span>
+        </div>
+
+        <div class="tl">
+          {# Item 1 #}
+          <div class="tl-item left">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card shadow-tq">
+              <h3 class="tl-year">2008</h3>
+              <p>
+                Iniciamos con la misión de apoyar a jóvenes ingenieros en situación de vulnerabilidad.
+              </p>
+            </article>
+          </div>
+
+          {# Item 2 #}
+          <div class="tl-item right">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card shadow-tq">
+              <h3 class="tl-year">2013 en adelante</h3>
+              <p>
+                Consolidamos alianzas con más de 25 universidades acreditadas de alta calidad,
+                expandiendo nuestro impacto en diferentes regiones del país.
+              </p>
+            </article>
+          </div>
+
+          {# Item 3 #}
+          <div class="tl-item left">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card shadow-tq">
+              <h3 class="tl-year">Hoy</h3>
+              <p>
+                Cientos de estudiantes y profesionales formados gracias a ACRES fortalecen la industria
+                de la infraestructura y aportan al desarrollo sostenible.
+              </p>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {# === SECCIÓN 4: Nuestra solución (2 columnas) === #}
+    <section class="bt-solucion">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- Columna TEXTO -->
+          <div class="col-12 col-lg-6">
+          <h2 class="bt-test-title2"style="color:#333333;"><strong>¿Cómo lo hacemos?</strong></h2>
+
+          <ul class="bt-sol-list">
+            <li><span class="chk"></span>Fomentamos inversión social con impacto real y sostenible.</li>
+            <li><span class="chk"></span>Diseñamos e implementamos programas de permanencia universitaria. </li>
+            <li><span class="chk"></span>Conectamos a jóvenes talentos con instituciones educativas de excelencia y empresas comprometidas con el desarrollo del país.</li>
+          </ul>
+        </div>
+
+        <!-- Columna ILUSTRACIÓN -->
+          <div class="col-12 col-lg-6">
+            <div class="bt-sol-illustration text-center">
+            <img
+              src="{{ directory }}/assets/images/05.png"
+              alt="Talentos ingeniería"
+              class="bt-sol-img"
+            >
+            <div class="bt-sol-shape"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    {# ===========================
+      Sección: Consejo directivo
+      =========================== #}
+    <section id="consejo-directivo" class="section-padding bg-light">
+      <div class="container">
+
+        <h2 class="bt-test-title2 fw-normal text-center mt-4"><strong>Consejo directivo</strong></h2>
+        <p class="fw-normal text-center mx-auto mb-4" style="max-width:820px">
+          ACRES cuenta con un Consejo Directivo de líderes empresariales en infraestructura,
+          expertos en políticas públicas, educación y desarrollo social. Su visión y experiencia
+          garantizan la transparencia y fortalecen nuestra gestión.
+        </p>
+
+        {# Puedes poner fotos en /assets/images/consejo/*.jpg (opcional) #}
+        {% set board = [
+          {
+            name: 'Manuel José Bravo',
+            role: 'Presidente de Paulo Emilio Bravo Consultores',
+            img:  directory ~ '/assets/images/consejo/Manuel_Bravo.png',
+            linkedin: '#'
+          },
+          {
+            name: 'Martha Alzate',
+            role: 'Gerente de Nikkon Koei LAC',
+            img:  directory ~ '/assets/images/consejo/Martha_Alzate.png',
+            linkedin: '#'
+          },
+          {
+            name: 'Juan Martín Caicedo',
+            role: 'Presidente de la CCI',
+            img:  directory ~ '/assets/images/consejo/Juan_Caicedo.png',
+            linkedin: '#'
+          },
+          {
+            name: 'Natalia Abello',
+            role: 'Gerente Concesión Ruta Costera',
+            img:  directory ~ '/assets/images/consejo/Natalia_Abello.png',
+            linkedin: '#'
+          },
+          {
+            name: 'Juan Cediel',
+            role: 'VP Sostenibilidad de Ultracem',
+            img:  directory ~ '/assets/images/consejo/Juan_Cediel.png',
+            linkedin: '#'
+          },
+          {
+            name: 'José Arturo Acevedo',
+            role: 'Gerente Arturo Acevedo SAS',
+            img:  directory ~ '/assets/images/consejo/Jose_Arturo_Acevedo.png',
+            linkedin: '#'
+          },
+          {
+            name: 'Carlos Lora',
+            role: 'Director de Comunicaciones de la CCI',
+            img:  directory ~ '/assets/images/consejo/Carlos_Lora.png',
+            linkedin: '#'
+          },
+          {
+            name: 'Natalia Leal',
+            role: 'Gerente OPAÍN S.A.',
+            img:  directory ~ '/assets/images/consejo/Natalia_Leal.png',
+            linkedin: '#'
+          },
+          {
+            name: 'Jose Echeverry',
+            role: 'Country Manager de ARUP',
+            img:  directory ~ '/assets/images/consejo/Jose_Echeverry.png',
+            linkedin: '#'
+          },
+          {
+            name: 'Natalia Ocampo Franco',
+            role: 'Directora General de CPST',
+            img:  directory ~ '/assets/images/consejo/Natalia_Ocampo.png',
+            linkedin: '#'
+          },
+          {
+            name: 'Eduardo Behrentz',
+            role: 'Rector UniGermana',
+            img:  directory ~ '/assets/images/consejo/Eduardo_Behrentz.png',
+            linkedin: '#'
+          },
+          {
+            name: 'Blanca Domínguez Sagbini',
+            role: 'Directora ejecutiva Fundación Buenamar',
+            img:  directory ~ '/assets/images/consejo/Blanca_dominguez.png',
+            linkedin: '#'
+          },
+        ] %}
+
+        <div class="row g-4 justify-content-center mt-2">
+          {% for m in board %}
+            <div class="col-6 col-md-4 col-lg-3">
+              <article class="board-card h-100 text-center p-3">
+                <div class="board-avatar mx-auto mb-3">
+                  {% if m.img %}
+                    <img src="{{ m.img }}" alt="{{ m.name }}" loading="lazy">
+                  {% else %}
+                    {# Fallback sin foto: iniciales #}
+                    {% set parts = m.name|split(' ') %}
+                    <span class="initials">{{ parts[0]|slice(0,1) }}{{ parts|last|slice(0,1) }}</span>
+                  {% endif %}
+
+                  {% if m.linkedin %}
+                    <a class="linkedin-btn" href="{{ m.linkedin }}" target="_blank" rel="noopener"
+                      aria-label="LinkedIn de {{ m.name }}">
+                      <!-- Ícono Linkedin (SVG) -->
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path fill="currentColor"
+                              d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h4.99V24H0V8.98zM8.98 8.98H14v2.05h.08c.7-1.32 2.4-2.7 4.93-2.7 5.27 0 6.24 3.47 6.24 7.98V24h-5v-6.68c0-1.59-.03-3.63-2.21-3.63-2.21 0-2.55 1.73-2.55 3.52V24h-5V8.98z"/>
+                      </svg>
+                    </a>
+                  {% endif %}
+                </div>
+
+                <h3 class="h6 fw-bold mb-1">{{ m.name }}</h3>
+                <p class="fw-normal small mb-0">{{ m.role }}</p>
+              </article>
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section>
+
+
+    {# === SECCIÓN: Equipo (6 personas) === #}
+    <section class="eq-section" id="consejo-directivo">
+      <div class="container">
+
+        {# Título + bajada #}
+        <div class="row">
+          <div class="col-12 col-lg-10">
+            <h2 class="bt-test-title2 fw-normal text-center"style="color:#333333;"><strong>Equipo</strong></h2>
+          </div>
+        </div>
+
+        {# Grid 3×2 (desktop), 2×3 (tablet), 1×6 (mobile) #}
+        <div class="row g-4 eq-grid">
+
+          {# CARD 1 #}
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eq-card">
+              <div class="eq-card__shadow"></div>
+              <div class="eq-card__media">
+                <div class="eq-card__pattern"></div>
+                <img src="{{ directory }}/assets/images/gina-centanaro.jpg"
+                    alt="Nombre Persona 1" class="eq-card__img">
+              </div>
+              <div class="eq-card__caption">
+                <h2 class="bt-test-title2" style="color:#000;"><strong>Gina Centanaro Olascoaga</strong></h2>
+                <span class="bt-test-title2" style="color:#000;">Directora ejecutiva</br></span>
+                <p class="bt-intro-title2 fw-normal" style="color:#000;">
+                  Directora Ejecutiva de Acres desde  diciembre de 2023. En este rol,
+                  lidera la estrategia de la organización, el programa de la Fundación
+                  y las campañas de consecución de aliados y recursos.
+                  A través de estas acciones, busca aportar a la formación
+                  personal de los estudiantes de ingeniería, inspirar
+                  sus vidas para que logren sus sueños, conectar sus historias
+                  con muchas personas y sumar esfuerzos para promover
+                  la permanencia en la educación superior de calidad en el país.
+                  <br>
+                  Tel: 6053030 ext. 164
+                  <br>
+                  Correo: direccion@fundacionacres.org.co
+
+                </p>
+              </div>
+            </article>
+          </div>
+
+          {# CARD 2 #}
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eq-card">
+              <div class="eq-card__shadow"></div>
+              <div class="eq-card__media">
+                <div class="eq-card__pattern"></div>
+                <img src="{{ directory }}/assets/images/Miller-Aguilera.jpg"
+                    alt="Nombre Persona 2" class="eq-card__img">
+              </div>
+              <div class="eq-card__caption">
+                <h2 class="bt-test-title2" style="color:#000;"><strong>Miller Aguilera Poveda</strong></h2>
+                <span class="bt-test-title2" style="color:#000;">Coordinador</br></span>
+                <p class="bt-intro-title2 fw-normal" style="color:#000;">Coordinador de Acres desde marzo de 2022. Se encarga de realizar
+                 el acompañamiento al proceso individual de cada uno de los beneficiarios, lo cual incluye
+                 el seguimiento académico y la renovación de su participación en el programa de la Fundación.
+                 Además, lidera la Red de Profesionales Egresados de Acres y gestiona la logística de
+                 los diferentes eventos y actividades realizados en el marco del programa,
+                 los cuales buscan motivar e inspirar a estudiantes y egresados.
+                  <br>
+                  Tel: 6053030 ext. 112
+                  <br>
+                  Correo: coordinacion@fundacionacres.org.co
+                </p>
+              </div>
+            </article>
+          </div>
+
+          {# CARD 3 #}
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eq-card">
+              <div class="eq-card__shadow"></div>
+              <div class="eq-card__media">
+                <div class="eq-card__pattern"></div>
+                <img src="{{ directory }}/assets/images/persona3.jpeg"
+                    alt="Nombre Persona 3" class="eq-card__img">
+              </div>
+              <div class="eq-card__caption">
+                <h2 class="bt-test-title2" style="color:#000;"><strong>Felipe Fernandez Gomez</strong></h2>
+                <span span class="bt-test-title2" style="color:#000;">Contador</br></span>
+                <p class="bt-intro-title2 fw-normal" style="color:#000;">Contador Público de la Universidad Santo Tomas graduado con Honores
+                CUM LAUDE, Magister en Tributación en la Universidad Central, especialista en Administración
+                Financiera de la Universidad de Los Andes, con estudios en Normas Internacionales de Información
+                Financiera – NIIF de la Universidad Externado de Colombia. Experiencia en áreas de Auditoría,
+                Contables, Financieras y Administrativas.</p>
+              </div>
+            </article>
+          </div>
+
+          {# CARD 4 #}
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eq-card">
+              <div class="eq-card__shadow"></div>
+              <div class="eq-card__media">
+                <div class="eq-card__pattern"></div>
+                <img src="{{ directory }}/assets/images/lorena.jpeg"
+                    alt="Nombre Persona 4" class="eq-card__img">
+              </div>
+              <div class="eq-card__caption">
+                <h2 class="bt-test-title2" style="color:#000;"><strong>Lorena Jimenez</strong></h2>
+                <span class="bt-test-title2" style="color:#000;">Analista financiera y contable</br></span>
+                <p class="bt-intro-title2 fw-normal" style="color:#000;">Profesional en Finanzas y Negocios Internacionales, de la Fundación
+                Universitaria Monserrate, Experiencia de más de 15 años en áreas Contables, Financieras y Administrativas.
+                Actualmente Analista Financiera y Contable para la firma FGC SAS.
+              </p>
+              </div>
+            </article>
+          </div>
+
+          {# CARD 5 #}
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eq-card">
+              <div class="eq-card__shadow"></div>
+              <div class="eq-card__media">
+                <div class="eq-card__pattern"></div>
+                <img src="{{ directory }}/assets/images/consultoria-contable.jpg"
+                    alt="Nombre Persona 5" class="eq-card__img">
+              </div>
+              <div class="eq-card__caption">
+                <h2 class="bt-test-title2" style="color:#000;"><strong>Fernández Gómez Consultores S.A.S.</strong></h2>
+                <span class="bt-test-title2" style="color:#000;">Outsourcing contable.</br></span>
+                <p class="bt-intro-title2 fw-normal" style="color:#000;">Desde el 2016, Fernández Gómez Consultores S.A.S.,
+                hace parte del equipo de Acres. Ellos se encargan de desarrollar las acciones
+                propias del ejercicio contable, tributario y de nómina, así como de apoyar
+                los temas financieros y presupuestales de la Fundación.</p>
+              </div>
+            </article>
+          </div>
+
+          {# CARD 6 #}
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eq-card">
+              <div class="eq-card__shadow"></div>
+              <div class="eq-card__media2">
+                <div class="card-img-wrapper"></div>
+                <img src="{{ directory }}/assets/images/revisoria_1.png"
+                    alt="Nombre Persona 6" class="eq-card__img2">
+              </div>
+              <div class="eq-card__caption">
+                <h2 class="bt-test-title2" style="color:#000;"><strong>Néstor Andrés Rincón Castillo </strong></h2>
+                <span class="bt-test-title2" style="color:#000;">Gobernanza</br></span>
+                <p class="bt-intro-title2 fw-normal" style="color:#000;">Contador Público Titulado y Revisor Fiscal,
+                de la Universidad Central con experiencia de alrededor de 20 años desarrollados en el área fiscal,
+                contable, tributaria y con conocimientos amplios en Norma Internacional de Información Financiera
+                (NIIF), Norma Internacional de Auditoría (NIA) y normativa fiscal y tributaria, gracias a esto
+                me desempeño como Auditor y Revisor Fiscal para las diferentes compañías de la firma DN International SAS.
+                </p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    {# ----- Footer global ----- #}
+    {{ page.footer }}
+
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+
+        <!-- Columna izquierda -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h5 class="fw-bold mb-3">Fundación ACRES</h5>
+          <ul class="list-unstyled">
+            <li><a href="/quienes-somos" class="footer-link">Quiénes somos</a></li>
+            <li><a href="/informacion-legal" class="footer-link">Información legal</a></li>
+            <li><a href="/contacto" class="footer-link">Contacto</a></li>
+            <li><a href="/politica-privacidad" class="footer-link">Política de privacidad</a></li>
+            <li><a href="/tratamiento-datos" class="footer-link">Tratamiento de datos</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="col-md-6">
+          <h5 class="fw-bold mb-3">Síguenos en redes</h5>
+          <div class="d-flex gap-3">
+            <a href="https://facebook.com" target="_blank" class="footer-icon">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="footer-icon">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="footer-icon">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="footer-icon">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Línea inferior -->
+      <div class="row mt-4">
+        <div class="col text-center">
+          <small>&copy; {{ "now"|date("Y") }} Fundación ACRES. Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>

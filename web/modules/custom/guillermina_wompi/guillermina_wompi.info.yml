@@ -1,0 +1,5 @@
+name: Guillermina Wompi
+type: module
+description: Endpoint mínimo para pruebas (pong)
+core_version_requirement: ^10 || ^11
+package: Custom

@@ -1,0 +1,286 @@
+{# web/themes/custom/fundacion_acres/templates/page--node--15.html.twig #}
+<!DOCTYPE html>
+<html lang="{{ language.getId }}">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body{{ attributes }}>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Saltar al contenido principal'|t }}
+    </a>
+
+    {# ----- Header global ----- #}
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{{ path('<front>') ~ 'home' }}">
+          <img src="{{ directory }}/assets/images/logo_acres-01.png" alt="Logo Fundación Acres">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#main-menu" aria-controls="main-menu"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-4 fw-bold">
+           {# Dropdown "Qué hacemos" #}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'que-hacemos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Qué hacemos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'beca-talentos' }}">Beca talentos para la ingeniería</a></li>
+
+              {# micrositio externo #}
+              <li>
+              <a class="dropdown-item" href="{{ path('<front>') ~ 'beca-guillermina' }}">
+               Beca Guillermina
+              </a>
+            </li>
+
+            <li><a class="dropdown-item" href="{{ path('<front>') ~ 'obras-labor-social' }}">Obras con labor social</a></li>
+          </ul>
+        </li>
+            <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{ path('<front>') ~ 'quienes-somos' }}"
+              id="qhDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Quienes somos
+            </a>
+
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="qhDropdown">
+              <li><a class="dropdown-item" href="{{ path('<front>') ~ 'talentos-alumni' }}">Talentos Alumni</a></li>
+          </ul>
+        </li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'impacto' }}">Impacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('<front>') ~ 'contacto' }}">Contacto</a></li>
+          </ul>
+
+          <div class="ms-auto">
+            <a class="btn btn-light btn-lg bt-final-btn" href="{{ path('<front>') ~ 'implusa-talento' }}"><strong>Impulsa talento aquí</strong></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {# =========================================================
+       SECCIÓN 1 – BANNER con imagen de fondo + texto + CTA
+       ========================================================= #}
+   <section class="bt-hero text-white" style="background-image:url('{{ directory }}/assets/images/6.png');">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-lg-8 bt-hero-content">
+            <h1 class="visually-hidden">Beca talentos para la ingeniería</h1>
+
+            <p class="bt-hero-title">
+              Potenciamos a los talentos de la ingeniería para que cada acción se traduzca en progreso y oportunidades para las regiones
+            </p>
+
+            <a href="{{ path('<front>') ~ 'implusa-talento' }}" class="btn btn-light btn-lg bt-final-btn">
+              <strong>Quiero apoyar Talentos</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {# decoración opcional #}
+      <div class="bt-hero-shape"></div>
+    </section>
+
+    <section class="ols-road">
+      <div class="container">
+        <h2 class="bt-test-title2 fw-normal text-center mt-4"><strong>Nuestro impacto en cifras</strong></h2>
+
+
+        <ul class="tl">
+          <!-- 2019 -->
+          <li class="tl-item left">
+            <span class="tl-dot"></span>
+            <article class="tl-card shadow-tq">
+              <h3 class="tl-year">2019</h3>
+              <p>Estudiantes apoyados: <strong>76</strong></p>
+            </article>
+          </li>
+
+          <!-- 2020 -->
+          <li class="tl-item right">
+            <span class="tl-dot"></span>
+            <article class="tl-card shadow-tq">
+              <h3 class="tl-year">2020</h3>
+              <ul class="tl-list">
+                <li>Estudiantes apoyados: <strong>61</strong></li>
+                <li>Plan Padrino: <strong>7</strong> estudiantes activos</li>
+                <li>Empresas sponsors: <strong>4</strong></li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- 2021 -->
+          <li class="tl-item left">
+            <span class="tl-dot"></span>
+            <article class="tl-card shadow-tq">
+              <h3 class="tl-year">2021</h3>
+              <ul class="tl-list">
+                <li>Estudiantes apoyados: <strong>91</strong></li>
+                <li>Plan Padrino: <strong>14</strong> estudiantes activos</li>
+                <li>Empresas sponsors: <strong>6</strong></li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- 2022 -->
+          <li class="tl-item right">
+            <span class="tl-dot"></span>
+            <article class="tl-card shadow-tq">
+              <h3 class="tl-year">2022</h3>
+              <ul class="tl-list">
+                <li>Estudiantes apoyados: <strong>107</strong></li>
+                <li>Plan Padrino: <strong>32</strong> estudiantes activos</li>
+                <li>Empresas sponsors: <strong>10</strong></li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- 2023 -->
+          <li class="tl-item left">
+            <span class="tl-dot"></span>
+            <article class="tl-card shadow-tq">
+              <h3 class="tl-year">2023</h3>
+              <ul class="tl-list">
+                <li>Estudiantes apoyados: <strong>110</strong></li>
+                <li>Plan Padrino: <strong>47</strong> estudiantes activos</li>
+                <li>Empresas sponsors: <strong>15</strong></li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- 2024 -->
+          <li class="tl-item right">
+            <span class="tl-dot"></span>
+            <article class="tl-card shadow-tq">
+              <h3 class="tl-year">2024</h3>
+              <ul class="tl-list">
+                <li>Estudiantes apoyados: <strong>95</strong></li>
+                <li>Plan Padrino: <strong>55</strong> estudiantes activos</li>
+                <li>Empresas sponsors: <strong>15</strong> (sin variación frente a 2023)</li>
+              </ul>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+
+
+    {# === SECCIÓN: Testimonios === #}
+    <section class="bt-testimonios">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="bt-test-title2"style="color:#333333;"><strong>Voces que inspiran</strong></h2>
+            <span class="bt-intro-title3 fw-normal text-center">
+              Los testimonios de nuestros talentos muestran cómo una beca puede cambiar no solo una vida,
+              sino el destino de una comunidad. </br></br>
+            </span>
+          </div>
+        </div>
+
+        <div class="row g-4 bt-test-grid">
+          {# Card 1 #}
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="bt-test-card">
+              <div class="bt-test-media">
+                <img src="{{ directory }}/assets/images/T4.png" alt="Testimonio 1">
+              </div>
+              <div class="bt-test-overlay">
+                <h2 class="bt-test-title2" style="color:#FECA35;">
+                <strong>Nathalia De la Rans</strong>
+                </h2>
+              </div>
+              <span class="bt-test-accent"></span>
+              <a href="#" class="stretched-link" aria-label="Leer testimonio 1"></a>
+            </article>
+          </div>
+
+          {# Card 2 #}
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="bt-test-card">
+              <div class="bt-test-media">
+                <img src="{{ directory }}/assets/images/T6.png" alt="Testimonio 2">
+              </div>
+              <div class="bt-test-overlay">
+                <h2 class="bt-test-title2" style="color:#FECA35;">
+                <strong>Michael Stefan Espejo</strong>
+                </h2>
+              </div>
+              <span class="bt-test-accent"></span>
+              <a href="#" class="stretched-link" aria-label="Leer testimonio 2"></a>
+            </article>
+          </div>
+
+          {# Card 3 #}
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="bt-test-card">
+              <div class="bt-test-media">
+                <img src="{{ directory }}/assets/images/T5.png" alt="Testimonio 3">
+              </div>
+              <div class="bt-test-overlay">
+                <h2 class="bt-test-title2" style="color:#FECA35;">
+                <strong>Lizbeth Escobar Cortes</strong>
+                </h2>
+              </div>
+              <span class="bt-test-accent"></span>
+              <a href="#" class="stretched-link" aria-label="Leer testimonio 3"></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {# === SECCIÓN 8: Banner final === #}
+    <section class="bt-final-cta" role="region" aria-label="Cierre y llamado a la acción">
+      <div class="bt-final-bg" style="background-image:url('{{ directory }}/assets/images/banners_final2.png');"></div>
+      <div class="bt-final-overlay"></div>
+
+      <div class="container">
+        <div class="bt-final-content text-center">
+          <h2 class="bt-final-title" style="color:#33333;">
+            Información Legal
+          </h2>
+
+          <a href="/se-parte#talentos-region"
+            class="btn btn-light btn-lg bt-final-btn"
+            aria-label="Quiero apoyar a un joven de región">
+            <strong>Conoce más</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    {# ----- Footer global ----- #}
+    {{ page.footer }}
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>
