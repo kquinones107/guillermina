@@ -472,7 +472,7 @@ html { scroll-behavior: smooth; }
 /* --- HERO Beca Talentos --- */
 .bt-hero{
   position: relative;
-  min-height: 120vh;
+  min-height: 110vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -522,18 +522,50 @@ html { scroll-behavior: smooth; }
   position: relative;
   top: -100px;   /* Sube el bloque */
   left: -125px;  /* Lo corre hacia la izquierda */
+  text-align: left;
 }
-.bt-hero-content2{
+
+@media (min-width: 992px) {
+  .bt-hero-content {
+    top: -10px;
+    left: -25px;
+  }
+}
+
+.bt-hero-content2 {
   position: relative;
-  top: 0;
-  left: 0;
-  text-align: left;  /* Lo corre hacia la derecha*/
+  top: -60px;   /* súbelo (ajusta el número según veas) */
+  left: -40px;  /* corre un poco hacia la izquierda */
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  .bt-hero-content2 {
+    top: -60px;
+    left: -40px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bt-hero-content2 {
+    top: -20px;
+    left: 0;
+    text-align: center; /* en móviles mejor centrado */
+  }
 }
 .bt-hero-content3{
   position: relative;
   top: -180px;   /* Sube el bloque */
   left: -105px;  /* Lo corre hacia la izquierda */
 }
+
+@media (min-width: 992px) {
+  .bt-hero-content3 {
+    top: -10px;
+    left: -25px;
+  }
+}
+
 
 /* Para pantallas grandes (desktop) */
 @media (min-width: 992px) {
