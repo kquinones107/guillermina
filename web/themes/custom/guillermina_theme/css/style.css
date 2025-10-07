@@ -86,7 +86,7 @@ a {
 /* Móvil (cuando colapsa) */
 @media (max-width: 991.98px) {
   .custom-navbar .navbar-collapse {
-    background: var(--azul-fundacres);
+    background: var(--gris-texto);
     padding: .75rem 1rem;
     border-radius: .5rem;
     margin-top: .5rem;
@@ -1138,7 +1138,7 @@ html { scroll-behavior: smooth; }
 /* Sombra turquesa tipo "ONE" (por si no la tienes) */
 .shadow-tq{
   box-shadow:
-    10px 10px 0 rgba(0,231,212,.5); /* acento atrás */
+    10px 10px 0 var(--azul-fundacres); /* acento atrás */
 }
 
 /* ===== Responsive ===== */
@@ -2069,6 +2069,7 @@ body { font-size: var(--step-1); }
   transition:transform .15s ease, background .15s ease;
 }
 .linkedin-btn:hover{ background:#004182; transform:translateY(-2px); }
+
 
 
 
