@@ -1905,8 +1905,7 @@ body { font-size: var(--step-1); }
 
 .donar-hero{
   min-height: 86vh;
-  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)),
-              url("url-de-tu-imagen-hero.jpg") center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55));
   padding: 4rem 0;
 }
 .hero-title{
