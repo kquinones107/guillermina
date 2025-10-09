@@ -848,12 +848,12 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'guillermina_db',
-  'username' => 'root',
-  'password' => 'root',
+  'database' => 'f_acres_db',
+  'username' => 'kevin_admin',
+  'password' => 'FundAcres2025_:;',
   'prefix' => '',
   'host' => 'localhost',
-  'port' => '3307',
+  'port' => '3306',
   'isolation_level' => 'READ COMMITTED',
   'driver' => 'mysql',
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
