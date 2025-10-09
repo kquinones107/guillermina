@@ -576,11 +576,55 @@ html { scroll-behavior: smooth; }
   }
 }
 
-@media (max-width: 575.98px) {
-  .bt-hero-content3 {
+
+@media (max-width: 575.98px){
+
+  /* caja hero */
+  .bt-hero{
+    min-height: 82vh;               /* más altura útil */
+    padding: 3rem 0 2.75rem;        /* aire arriba/abajo */
+    background-size: cover;         /* asegura cobertura */
+    background-position: center 15%;/* centra la imagen */
+  }
+
+  /* overlay más fuerte para que el texto siempre se lea */
+  .bt-hero::before{
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,.55) 0%,
+      rgba(0,0,0,.72) 65%,
+      rgba(0,0,0,.82) 100%
+    );
+  }
+
+  /* padding lateral del contenedor */
+  .bt-hero .container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* bloque del texto del hero de “alumni” (tu .bt-hero-content3) */
+  .bt-hero-content3{
+    left: 0;                        /* centrado respecto al grid */
+    transform: translateY(-18vh);   /* súbelo sin romper el flujo */
     top: 0;
-    left: 0;
     text-align: center;
+  }
+
+  /* tipografía del titular */
+  .bt-hero-title2{
+    font-size: clamp(1.15rem, 5.2vw, 1.45rem);
+    line-height: 1.25;
+    max-width: 28ch;                /* ancho cómodo para móvil */
+    margin-bottom: 1rem;
+  }
+
+  /* botón CTA: ancho cómodo y legible */
+  .bt-hero .bt-final-btn{
+    width: 100%;
+    max-width: 320px;
+    padding: .9rem 1rem;
+    font-size: 1rem;
   }
 }
 
