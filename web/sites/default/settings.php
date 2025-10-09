@@ -856,8 +856,8 @@ $databases['default']['default'] = array (
   'port' => '3306',
   'isolation_level' => 'READ COMMITTED',
   'driver' => 'mysql',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql\\Connection',
-  'autoload' => 'core/modules/mysql\\src\\Driver\\Database\\mysql\\Connection',
+  //'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  //'autoload' => 'core/modules/mysql\\src\\Driver\\Database\\mysql\\Connection',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_G7qtOFF6KHYmUUqRq5SC7VcNV2bMuqXpmqoFUag8Y6QUfjkdwtq6YLsIrn8nrA8qBHMr0U7FJQ/sync';
 $settings['wompi_integrity_secret'] = 'test_integrity_xyVxjiOwyX1HbsMpbtf455ocM3Qm5r0q';
