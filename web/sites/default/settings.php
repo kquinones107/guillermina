@@ -856,7 +856,7 @@ $databases['default']['default'] = array (
   'port' => '3306',
   'isolation_level' => 'READ COMMITTED',
   'driver' => 'mysql',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql\\Connection',
   'autoload' => 'core/modules/mysql\\src\\Driver\\Database\\mysql\\Connection',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_G7qtOFF6KHYmUUqRq5SC7VcNV2bMuqXpmqoFUag8Y6QUfjkdwtq6YLsIrn8nrA8qBHMr0U7FJQ/sync';
