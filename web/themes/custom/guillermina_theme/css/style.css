@@ -581,10 +581,10 @@ html { scroll-behavior: smooth; }
 
   /* caja hero */
   .bt-hero{
-    min-height: 82vh;               /* más altura útil */
-    padding: 3rem 0 2.75rem;        /* aire arriba/abajo */
+    min-height: 70vh;               /* más altura útil */
+    padding: 2rem 0 1.5rem;        /* aire arriba/abajo */
     background-size: cover;         /* asegura cobertura */
-    background-position: center 15%;/* centra la imagen */
+    background-position: center 10%;/* centra la imagen */
   }
 
   /* overlay más fuerte para que el texto siempre se lea */
